@@ -3,10 +3,7 @@
 ## 1. useState
 
 - Condition: Used when you need to manage state in functional components.
-- Important Points:
-  - Returns an array with the current state value and a function to update it.
-  - State updates are merged in class components, but replaced in functional components.
-
+-
 Example:
 ```jsx
 import React, { useState } from 'react';
