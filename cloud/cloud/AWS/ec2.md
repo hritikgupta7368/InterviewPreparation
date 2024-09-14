@@ -29,3 +29,14 @@
 
 ## Console
 ![Anthropic Logo](images/console.webp)
+
+## Auto Scaling Groups (ASC)
+- An Auto Scaling Group is a collection of EC2 instances that are managed together as a group.
+- The ASG automatically adjusts the number of instances based on predefined policies or schedules.
+- If an instance fails a health check, the ASC replaces with new instance.
+- Integrate your ASG with an ELB to distribute incoming traffic evenly across all instances in the ASG. This helps ensure that no single instance is overloaded.
+  ### Steps to create ASC
+    - set name ,Use the previously created launch configuration, set initial instances, set min and max instances that should always be running.
+    - set policies , how the ASG should scale in or out based on metrics.
+    - Eg : Add 3 instances at 8 AM on weekdays
+    - Eg :  If average CPU utilization across instances exceeds 70% for 5 minutes, add 2 more instances.
