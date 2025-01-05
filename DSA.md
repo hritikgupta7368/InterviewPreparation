@@ -1,0 +1,7 @@
+- DSA ( 500 questions )
+- Linked List
+    - single Linked List
+    - Double Linked List
+- Arrays ( 1D )
+    - Searching
+    - Sorting
