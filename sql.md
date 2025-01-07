@@ -74,11 +74,17 @@ ORDER BY hire_date;
 - List employees who don't have a manager assigned (NULL handling).
   ```sql
   SELECT * 
-FROM employees 
-WHERE manager_id IS NULL;
+  FROM employees 
+  WHERE manager_id IS NULL;
   ```
 
 - Display count of employees in each department.
+  ```sql
+  SELECT d.department_name, COUNT(e.emp_id) as emp_count
+  FROM departments d
+  LEFT JOIN employees e ON d.department_id = e.department_id
+  GROUP BY d.department_name;
+  ```
 
 - Find average, minimum, and maximum salary for each department.
 
