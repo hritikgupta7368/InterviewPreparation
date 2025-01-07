@@ -50,6 +50,10 @@ Index
 ## Problems
 
 - List all employees with salary greater than 70000, ordered by their hire date.
+```sql
+SELECT * FROM employees 
+WHERE salary > 70000 
+ORDER BY hire_date;
 
 - Find all employees in IT department whose first name starts with 'J'.
 
