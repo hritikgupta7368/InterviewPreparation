@@ -66,12 +66,17 @@ ORDER BY hire_date;
   ```
 
 - Show unique department locations from departments table.
-    ```sql
+  ```sql
   SELECT DISTINCT location 
   FROM departments;
   ```
 
 - List employees who don't have a manager assigned (NULL handling).
+  ```sql
+  SELECT * 
+FROM employees 
+WHERE manager_id IS NULL;
+  ```
 
 - Display count of employees in each department.
 
