@@ -80,12 +80,27 @@ ORDER BY hire_date;
   ```
 
 - Find average, minimum, and maximum salary for each department.
+```sql
+SELECT d.department_name,
+    AVG(e.salary) as avg_salary,
+    MIN(e.salary) as min_salary,
+    MAX(e.salary) as max_salary
+FROM departments d
+LEFT JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_name;
+```
 
 - Show departments having more than 2 employees.
+```sql
+```
 
 - List departments where average salary is above 75000.
+```sql
+```
 
 - Display employee names with their department names using INNER JOIN.
+```sql
+```
 
 - Show all departments and their employees using LEFT JOIN (including departments with no employees).
 
