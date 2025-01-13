@@ -134,6 +134,12 @@ JOIN departments d ON e.department_id = d.department_id;
 
 - Show projects with department name and number of employees assigned.
 ```sql
+SELECT p.project_name, d.department_name, 
+       COUNT(ep.emp_id) as employee_count
+FROM projects p
+JOIN departments d ON p.department_id = d.department_id
+LEFT JOIN employee_projects ep ON p.project_id = ep.project_id
+GROUP BY p.project_name, d.department_name;
 ```
 
 - Find employees whose last name contains 'son'.
