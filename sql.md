@@ -101,6 +101,11 @@ HAVING COUNT(e.emp_id) > 2;
 
 - List departments where average salary is above 75000.
 ```sql
+SELECT d.department_name, AVG(e.salary) as avg_salary
+FROM departments d
+JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_name
+HAVING AVG(e.salary) > 75000;
 ```
 
 - Display employee names with their department names using INNER JOIN.
