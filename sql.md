@@ -124,6 +124,12 @@ LEFT JOIN employees e ON d.department_id = e.department_id;
 
 - List employees with their manager name and department name.
 ```sql
+SELECT e.first_name as emp_name, 
+       m.first_name as manager_name,
+       d.department_name
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.emp_id
+JOIN departments d ON e.department_id = d.department_id;
 ```
 
 - Show projects with department name and number of employees assigned.
