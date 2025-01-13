@@ -57,18 +57,27 @@ ORDER BY hire_date;
 ```
 
 - Find all employees in IT department whose first name starts with 'J'.
-```sql
-SELECT e.* 
-FROM employees e
-JOIN departments d ON e.department_id = d.department_id
-WHERE d.department_name = 'IT' 
-AND e.first_name LIKE 'J%';
-```
+
 - Show unique department locations from departments table.
+  ```sql
+  SELECT DISTINCT location 
+  FROM departments;
+  ```
 
 - List employees who don't have a manager assigned (NULL handling).
+  ```sql
+  SELECT * 
+  FROM employees 
+  WHERE manager_id IS NULL;
+  ```
 
 - Display count of employees in each department.
+  ```sql
+  SELECT d.department_name, COUNT(e.emp_id) as emp_count
+  FROM departments d
+  LEFT JOIN employees e ON d.department_id = e.department_id
+  GROUP BY d.department_name;
+  ```
 
 - Find average, minimum, and maximum salary for each department.
 
