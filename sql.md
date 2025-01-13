@@ -92,6 +92,11 @@ GROUP BY d.department_name;
 
 - Show departments having more than 2 employees.
 ```sql
+SELECT d.department_name, COUNT(e.emp_id) as emp_count
+FROM departments d
+JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_name
+HAVING COUNT(e.emp_id) > 2;
 ```
 
 - List departments where average salary is above 75000.
