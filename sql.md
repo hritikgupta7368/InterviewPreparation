@@ -110,17 +110,30 @@ HAVING AVG(e.salary) > 75000;
 
 - Display employee names with their department names using INNER JOIN.
 ```sql
+SELECT e.first_name, e.last_name, d.department_name
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.department_id;
 ```
 
 - Show all departments and their employees using LEFT JOIN (including departments with no employees).
+```sql
+```
 
 - List employees with their manager name and department name.
+```sql
+```
 
 - Show projects with department name and number of employees assigned.
+```sql
+```
 
 - Find employees whose last name contains 'son'.
+```sql
+```
 
 - Display employee names in uppercase and their email domains.
+```sql
+```
 
 - List employees hired in first quarter of 2020.
 
