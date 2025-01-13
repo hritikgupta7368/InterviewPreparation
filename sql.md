@@ -54,9 +54,16 @@ Index
 SELECT * FROM employees 
 WHERE salary > 70000 
 ORDER BY hire_date;
+```
 
 - Find all employees in IT department whose first name starts with 'J'.
-
+```sql
+SELECT e.* 
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+WHERE d.department_name = 'IT' 
+AND e.first_name LIKE 'J%';
+```
 - Show unique department locations from departments table.
 
 - List employees who don't have a manager assigned (NULL handling).
