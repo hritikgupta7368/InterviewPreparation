@@ -117,6 +117,9 @@ INNER JOIN departments d ON e.department_id = d.department_id;
 
 - Show all departments and their employees using LEFT JOIN (including departments with no employees).
 ```sql
+SELECT d.department_name, e.first_name, e.last_name
+FROM departments d
+LEFT JOIN employees e ON d.department_id = e.department_id;
 ```
 
 - List employees with their manager name and department name.
