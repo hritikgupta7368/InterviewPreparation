@@ -163,6 +163,9 @@ WHERE hire_date BETWEEN '2020-01-01' AND '2020-03-31';
 
 - Calculate tenure (in years) for each employee.
 ```sql
+SELECT first_name, last_name,
+       ROUND(DATEDIFF(CURRENT_DATE, hire_date)/365.0, 2) as tenure_years
+FROM employees;
 ```
 
 - List all employees who earn more than the average salary of their department.
