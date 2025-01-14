@@ -156,14 +156,26 @@ FROM employees;
 ```
 
 - List employees hired in first quarter of 2020.
+```sql
+SELECT * FROM employees
+WHERE hire_date BETWEEN '2020-01-01' AND '2020-03-31';
+```
 
 - Calculate tenure (in years) for each employee.
+```sql
+```
 
 - List all employees who earn more than the average salary of their department.
+```sql
+```
 
 - Find employees hired in 2020 who work in the IT department.
+```sql
+```
 
 - Display employee names along with their manager names and department names.
+```sql
+```
 
 - Find projects that have no employees assigned to them (using LEFT JOIN).
 
