@@ -150,6 +150,9 @@ WHERE last_name LIKE '%son%';
 
 - Display employee names in uppercase and their email domains.
 ```sql
+SELECT UPPER(CONCAT(first_name, ' ', last_name)) as full_name,
+       SUBSTRING(email, POSITION('@' IN email) + 1) as email_domain
+FROM employees;
 ```
 
 - List employees hired in first quarter of 2020.
