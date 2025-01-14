@@ -144,6 +144,8 @@ GROUP BY p.project_name, d.department_name;
 
 - Find employees whose last name contains 'son'.
 ```sql
+SELECT * FROM employees 
+WHERE last_name LIKE '%son%';
 ```
 
 - Display employee names in uppercase and their email domains.
