@@ -36,14 +36,7 @@ def linear_search(arr, target):
 Time Complexity: O(log n)
 Space Complexity: O(1)
 ```
-
-Visual representation:
-```
-[1, 3, 4, 6, 8, 9, 11]
-             ↑ mid
-[1, 3, 4] 6 [8, 9, 11]
-        ↑ mid    
-```
+![Alt text for the GIF](/resources/algo/image.png)
 
 #### Standard Binary Search
 ```python
@@ -51,47 +44,33 @@ def binary_search(arr, target):
         left, right = 0, len(arr) - 1
         
         while left <= right:
-                mid = left + (right - left) // 2
+                mid = left + (right - left) // 2 #floor divison
                 if arr[mid] == target:
                         return mid
-                elif arr[mid] < target:
+                elif arr[mid] < target: #if target is big search in right span
                         left = mid + 1
-                else:
+                else:                   #if target is small search in left span
                         right = mid - 1
                         
         return -1
 ```
+#### Variations/questions
+- square root of a number/Find nth root / Find smallest divisor
+- First and Last occurences
+- count frequency of element
+- find element in rotated sorted array with duplicates
+- Find rotation point/pivot element
+- peak element in array
+- find in Bitonic array (increasing then decreasing)
+- Search insert position
+- Find smallest letter greater than target
+- Find closest elements
+- minimum number of days to make m bouquets
+- Split Array Largest Sum
+- Search in nearly sorted array
+- Find element in infinite sorted array
 
-#### Lower Bound
-Finds first element >= target
-```python
-def lower_bound(arr, target):
-        left, right = 0, len(arr)
-        
-        while left < right:
-                mid = left + (right - left) // 2
-                if arr[mid] >= target:
-                        right = mid
-                else:
-                        left = mid + 1
-                        
-        return left
-```
+## Sorting Algorithms
 
-#### Upper Bound
-Finds first element > target
-```python
-def upper_bound(arr, target):
-        left, right = 0, len(arr)
-        
-        while left < right:
-                mid = left + (right - left) // 2
-                if arr[mid] > target:
-                        right = mid
-                else:
-                        left = mid + 1
-                        
-        return left
-```
-
-> Note: This is a basic structure. More algorithms and detailed explanations can be added based on requirements.
+### Quick Sort
+### Merge Sort
